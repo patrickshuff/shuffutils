@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
     ifstream myfile;
     std::string grep_str = argv[1];
     std::string fname = argv[2];
-    myfile.open(fname);
+    myfile.open(fname.c_str());
     if (myfile.is_open()) {
         while (getline(myfile, line)) {
             std::size_t found = line.find(grep_str);
