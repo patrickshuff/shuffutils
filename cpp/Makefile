@@ -1,3 +1,10 @@
+
+RM=rm -f
+BINDIR=bin
+
 all:
-	mkdir bin/
+	mkdir -p $(BINDIR)
 	g++ -o bin/grep grep.cpp
+
+clean:
+	$(RM) $(BINDIR)/*
